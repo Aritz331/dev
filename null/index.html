@@ -14,8 +14,8 @@ function getQV()
        }
        return ret
 }
-console.log("ret: " + ret)
 src = getQV()
+console.log("ret: " + ret)
 el = document.getElementById("frame")
 el.setAttribute("src",src)
 history.pushState(null, "", location.href.split("?")[0]);
