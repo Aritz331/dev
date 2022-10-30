@@ -5,7 +5,7 @@ function getQV()
 {
        query = []
        query = window.location.href.split('?')
-       if (query[1] == "from") {
+       if (query[1].split("=") == "from") {
               from = []
               from = query[1].split("=")
               ret = from[1]
