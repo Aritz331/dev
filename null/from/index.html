@@ -7,7 +7,7 @@ function getQV()
        query = window.location.href.split('?')
        return query[1]
 }
-src = getSrcQV()
+src = getQV()
 el = document.getElementById("frame")
 el.setAttribute("src",src)
 history.pushState(null, "", location.href.split("?")[0]);
