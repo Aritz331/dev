@@ -15,9 +15,11 @@ function getQV()
        }
        return ret
 }
-src = getQV()
-console.log("ret: " + ret)
-el = document.getElementById("frame")
-el.setAttribute("src",src)
-history.pushState(null, "", location.href.split("?")[0]);
+window.onload = function() {
+       src = getQV()
+       console.log("ret: " + ret)
+       el = document.getElementById("frame")
+       el.setAttribute("src",src)
+       history.pushState(null, "", location.href.split("?")[0]);
+}
 </script>
