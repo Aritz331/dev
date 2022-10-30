@@ -5,8 +5,16 @@ function getQV()
 {
        query = []
        query = window.location.href.split('?')
-       return query[1]
+       if (query[1] == "from") {
+              from = []
+              from = query[1].split("=")
+              ret = from[1]
+       } else {
+              ret = query[1]
+       }
+       return ret
 }
+console.log("ret: " + ret)
 src = getQV()
 el = document.getElementById("frame")
 el.setAttribute("src",src)
