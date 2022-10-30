@@ -24,5 +24,6 @@ window.onload = function() {
        el = document.getElementById("frame")
        el.setAttribute("src",src)
        history.pushState(null, "", location.href.split("?")[0]);
+       history.pushState(null, "", location.href.slice(0,-1))
 }
 </script>
