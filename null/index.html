@@ -15,8 +15,11 @@ function getQV()
        }
        return ret
 }
+function getSrc() {
+       return 'from/' + getQV()
+}
 window.onload = function() {
-       src = getQV()
+       src = getSrc()
        console.log("ret: " + ret)
        el = document.getElementById("frame")
        el.setAttribute("src",src)
