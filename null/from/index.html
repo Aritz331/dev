@@ -1,0 +1,22 @@
+<iframe id="frame" src="" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+
+<script>
+function getQV()
+{
+       query = []
+       query = window.location.href.split('?')
+       if (query[1] == "from") {
+              from = []
+              from = query[1].split("=")
+              ret = from[1]
+       } else {
+              ret = query[1]
+       }
+       return ret
+}
+console.log("ret: " + ret)
+src = getQV()
+el = document.getElementById("frame")
+el.setAttribute("src",src)
+history.pushState(null, "", location.href.split("?")[0]);
+</script>
